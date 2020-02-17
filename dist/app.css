@@ -73,3 +73,79 @@ header .nav-right li button:hover {
   background-color: #30488F;
 }
 
+.header-bottom {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.header-bottom .header-bottom-left {
+  width: 45%;
+  height: 75%;
+}
+
+.header-bottom .header-bottom-left h1 {
+  font-size: 43px;
+  color: #58402C;
+  font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+  line-height: 60px;
+}
+
+.header-bottom .header-bottom-left .test-jambo {
+  color: #9E552C;
+  font-size: 23px;
+  font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+  padding-top: 40px;
+}
+
+.header-bottom .header-bottom-left li button img {
+  height: 15px;
+}
+
+.header-bottom .header-bottom-left .list-jambo {
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
+
+.header-bottom .header-bottom-left .list-jambo li {
+  list-style: none;
+  color: grey;
+}
+
+.header-bottom .header-bottom-left .list-jambo li button {
+  font-size: 14px;
+  color: white;
+  font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+  font-weight: 600;
+  background-color: #30488F;
+  border: 1px solid #30488F;
+  border-radius: 4px;
+  height: 35px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.header-bottom .header-bottom-left .list-jambo li button:hover {
+  background-color: #233569;
+}
+
+.header-bottom .header-bottom-left .space-buttons {
+  padding: 20px;
+}
+
+.header-bottom .header-bottom-left .email a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #7A6D56;
+}
+
+.header-bottom .header-bottom-right {
+  width: 55%;
+}
+
+.header-bottom .header-bottom-right img {
+  width: 100%;
+}
+
