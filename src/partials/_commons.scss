@@ -4,3 +4,21 @@
         local("HarmoniaSansProCyr-Regular"),
         url('https://teambit.io/wp-content/themes/teambeat/fonts/HarmoniaSansProCyr-Regular_gdi.woff') format("woff");
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  height: 100vh;
+}
+
+.list-style {
+  list-style: none;
+}
+.padding {
+  padding: 20px;
+}

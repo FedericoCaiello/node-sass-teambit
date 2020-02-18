@@ -1,3 +1,8 @@
+@font-face {
+  font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+  src: local("HarmoniaSansProCyr-Regular"), url("https://teambit.io/wp-content/themes/teambeat/fonts/HarmoniaSansProCyr-Regular_gdi.woff") format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +12,14 @@
 body {
   background: white;
   height: 100vh;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.padding {
+  padding: 20px;
 }
 
 header {
@@ -35,19 +48,19 @@ header .nav-right .list-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-
-header .nav-right .list-nav li {
-  list-style: none;
-  padding: 20px;
+  position: relative;
 }
 
 header .nav-right .list-nav li a {
   text-decoration: none;
   color: #7A6D56;
   font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 85%;
   font-weight: bold;
+}
+
+header .nav-right .list-nav li a:hover {
+  color: #30488F;
 }
 
 header .nav-right li button {
@@ -64,13 +77,31 @@ header .nav-right li button {
   justify-content: space-around;
 }
 
-header .nav-right li button img {
-  height: 15px;
-}
-
 header .nav-right li button:hover {
   color: white;
   background-color: #30488F;
+}
+
+header .nav-right li button:hover svg .google-white {
+  display: none;
+}
+
+header .nav-right .dropdown {
+  display: none;
+}
+
+header .nav-right .dropdown li {
+  padding: 10px 8px;
+}
+
+header .nav-right .dropdown:hover {
+  position: absolute;
+  top: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  transition: opacity linear 0.15s;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  padding-right: 5px;
 }
 
 .header-bottom {
@@ -98,10 +129,6 @@ header .nav-right li button:hover {
   padding-top: 40px;
 }
 
-.header-bottom .header-bottom-left li button img {
-  height: 15px;
-}
-
 .header-bottom .header-bottom-left .list-jambo {
   display: flex;
   height: 80px;
@@ -121,9 +148,8 @@ header .nav-right li button:hover {
   background-color: #30488F;
   border: 1px solid #30488F;
   border-radius: 4px;
-  height: 35px;
   display: flex;
-  justify-content: space-around;
+  align-items: flex-end;
   padding: 10px;
 }
 
@@ -139,6 +165,11 @@ header .nav-right li button:hover {
   text-decoration: none;
   font-size: 14px;
   color: #7A6D56;
+}
+
+.header-bottom .header-bottom-left .email a .icon-arrow-right {
+  color: #7A6D56;
+  font-size: 10px;
 }
 
 .header-bottom .header-bottom-right {
