@@ -12,8 +12,6 @@
 body {
   background: white;
   height: 100vh;
-  width: 1100px;
-  margin: auto;
 }
 
 .list-style {
@@ -22,6 +20,11 @@ body {
 
 .padding {
   padding: 20px;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .header-top {
@@ -45,6 +48,8 @@ header .nav-left {
 header .nav-right {
   width: 80%;
   background: white;
+  display: flex;
+  flex-flow: row-reverse;
 }
 
 header .nav-right .fa-bars {
@@ -53,7 +58,7 @@ header .nav-right .fa-bars {
 }
 
 header .nav-right .list-nav {
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
 }
@@ -64,6 +69,7 @@ header .nav-right .list-nav li a {
   font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
   font-size: 85%;
   font-weight: bold;
+  display: flex;
 }
 
 header .nav-right .list-nav li a:hover {
@@ -95,9 +101,6 @@ header .nav-right li button:hover svg .google-white {
 
 header .nav-right .dropdown {
   display: none;
-}
-
-header .nav-right .dropdown .dropdown:focus {
   position: absolute;
   top: 50px;
   border: 1px solid lightgrey;
@@ -107,6 +110,10 @@ header .nav-right .dropdown .dropdown:focus {
   padding-right: 5px;
 }
 
+header .nav-right #tendina:hover .dropdown {
+  display: block;
+}
+
 header .nav-right .dropdown li {
   padding: 10px 8px;
 }
@@ -114,6 +121,12 @@ header .nav-right .dropdown li {
 @media screen and (min-width: 767px) {
   header .nav-right i.fa-bars {
     display: none;
+    font-size: 25px;
+    color: #7A6D56;
+  }
+
+  header .nav-right .list-nav {
+    display: flex;
   }
 }
 
@@ -180,7 +193,7 @@ header .nav-right .dropdown li {
   color: #7A6D56;
 }
 
-.header-bottom .header-bottom-left .email a .icon-arrow-right {
+.header-bottom .header-bottom-left .email a .fa-arrow-right {
   color: #7A6D56;
   font-size: 10px;
 }
@@ -191,5 +204,18 @@ header .nav-right .dropdown li {
 
 .header-bottom .header-bottom-right img {
   width: 100%;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header-bottom .header-bottom-left,
+  .header-bottom .header-bottom-right {
+    width: 100%;
+  }
 }
 

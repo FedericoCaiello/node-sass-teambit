@@ -1,4 +1,8 @@
 // barra principale
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
 .header-top {
   height: 70px;
   display: flex;
@@ -17,12 +21,14 @@ header .nav-left {
 header .nav-right {
   width: 80%;
   background: white;
+  display: flex;
+  flex-flow: row-reverse;
   .fa-bars {
     font-size: 25px;
     color: $colornav;
   }
   .list-nav {
-    display: flex;
+    display: none;
     align-items: center;
     position: relative;
   }
@@ -32,6 +38,7 @@ header .nav-right {
     font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
     font-size: 85%;
     font-weight: bold;
+    display: flex;
   }
   .list-nav li a:hover {
     color: $colorfont;
@@ -59,15 +66,16 @@ header .nav-right {
 
   .dropdown {
     display: none;
-    .dropdown:focus {
-      position: absolute;
-      top: 50px;
-      border: 1px solid lightgrey;
-      border-radius: 7px;
-      transition: opacity linear 0.15s;
-      box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
-      padding-right: 5px;
-    }
+    position: absolute;
+    top: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    transition: opacity linear 0.15s;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+    padding-right: 5px;
+  }
+  #tendina:hover .dropdown {
+    display: block;
   }
   .dropdown li {
     padding: 10px 8px;
@@ -75,6 +83,11 @@ header .nav-right {
   @media screen and (min-width: $breakpointsmall) {
     i.fa-bars {
       display: none;
+      font-size: 25px;
+      color: $colornav;
+    }
+    .list-nav {
+      display: flex;
     }
   }
 }
@@ -129,7 +142,7 @@ header .nav-right {
       text-decoration: none;
       font-size: 14px;
       color: #7A6D56;
-      .icon-arrow-right {
+      .fa-arrow-right {
         color: #7A6D56;
         font-size: 10px;
       }
@@ -139,6 +152,19 @@ header .nav-right {
     width: 55%;
     img {
       width: 100%;
+      padding-top: 20px;
     }
+  }
+  @media screen and (max-width: $breakpointsmall) {
+    & {
+      flex-direction: column;
+      height: auto;
+
+      .header-bottom-left,
+      .header-bottom-right {
+        width: 100%;
+      }
+    }
+
   }
 }
