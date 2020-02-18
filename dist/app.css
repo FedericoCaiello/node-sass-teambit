@@ -12,6 +12,8 @@
 body {
   background: white;
   height: 100vh;
+  width: 1100px;
+  margin: auto;
 }
 
 .list-style {
@@ -22,14 +24,16 @@ body {
   padding: 20px;
 }
 
-header {
-  width: 1100px;
-  margin: auto;
-}
-
 .header-top {
+  height: 70px;
   display: flex;
   border-bottom: 1px solid #BDB5AF;
+}
+
+.header-top nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 header .nav-left {
@@ -43,11 +47,14 @@ header .nav-right {
   background: white;
 }
 
+header .nav-right .fa-bars {
+  font-size: 25px;
+  color: #7A6D56;
+}
+
 header .nav-right .list-nav {
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   position: relative;
 }
 
@@ -90,11 +97,7 @@ header .nav-right .dropdown {
   display: none;
 }
 
-header .nav-right .dropdown li {
-  padding: 10px 8px;
-}
-
-header .nav-right .dropdown:hover {
+header .nav-right .dropdown .dropdown:focus {
   position: absolute;
   top: 50px;
   border: 1px solid lightgrey;
@@ -102,6 +105,16 @@ header .nav-right .dropdown:hover {
   transition: opacity linear 0.15s;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   padding-right: 5px;
+}
+
+header .nav-right .dropdown li {
+  padding: 10px 8px;
+}
+
+@media screen and (min-width: 767px) {
+  header .nav-right i.fa-bars {
+    display: none;
+  }
 }
 
 .header-bottom {
