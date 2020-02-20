@@ -35,7 +35,7 @@ header .nav-right {
   .list-nav li a {
     text-decoration: none;
     color: #7A6D56;
-    font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+    font-family: $fontfamily;
     font-size: 85%;
     font-weight: bold;
     display: flex;
@@ -46,7 +46,7 @@ header .nav-right {
   li button {
     color: $colorfont;
     font-size: 14px;
-    font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+    font-family: $fontfamily;
     font-weight: 600;
     width: 80px;
     height: 35px;
@@ -55,6 +55,7 @@ header .nav-right {
     background-color: white;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
   li button:hover {
     color: white;
@@ -102,13 +103,13 @@ header .nav-right {
     h1 {
       font-size: 43px;
       color: #58402C;
-      font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+      font-family: $fontfamily;
       line-height: 60px;
     }
     .test-jambo {
       color: #9E552C;
       font-size: 23px;
-      font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+      font-family: $fontfamily;
       padding-top: 40px;
     }
     .list-jambo {
@@ -123,7 +124,7 @@ header .nav-right {
     .list-jambo li button {
       font-size: 14px;
       color: white;
-      font-family: HarmoniaSansProCyr-Regular, Arial, sans-serif;
+      font-family: $fontfamily;
       font-weight: 600;
       background-color: $colorfont;
       border: 1px solid $colorfont;

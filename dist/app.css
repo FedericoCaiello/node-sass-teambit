@@ -88,6 +88,7 @@ header .nav-right li button {
   background-color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 header .nav-right li button:hover {
@@ -108,10 +109,11 @@ header .nav-right .dropdown {
   transition: opacity linear 0.15s;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   padding-right: 5px;
+  background-color: white;
 }
 
 header .nav-right #tendina:hover .dropdown {
-  display: block;
+  display: inline-block;
 }
 
 header .nav-right .dropdown li {
